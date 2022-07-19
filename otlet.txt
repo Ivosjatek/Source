@@ -1,0 +1,179 @@
+
+Telefonos alkalmazás, 
+
+
+Indító képernyő:
+-egy kép
+-egy felirat amit meg lehet nyomni
+(igazabáól bárhova nyomsz a képernyőn, kiváltodik a kattintás esemény) 
+
+
+Animáció lehetőségek:
+-2 sörösüveg koccint egyet 
+-ki nyitsz/ ki nyilik egy sör, szisszenés hang
+-egy korsó megtelik sörrel
+-egy feles pohár megtelik
+-boros üveg kinyílik
+
+
+Authentikció:
+-első belépésnél be lehessen lépni:
+	-facebook
+	-google
+-létre lehet hozni saját fiókot is (email megerősítés bla bla)
+
+
+Animáció után:/
+-megjelenik a felhasználó karaktere
+-bal alsó sarokba egy csík ami a szint -> gyors fejlődés, néhány játék szinthez kötött (tapasztalat igénylése miatt)
+-bal felső sarokba egy hamburger menü 
+-a karaktert lehet öltöztetni:
+	-játékbeli pénz/ coin/ érme bevezetése
+	-játékbeli pénzből lehet vásárolni -> tranzakció
+	-a játékbeli pénzt minden játékért kapsz, napi bónusz
+-a hamburger menüt lenyítva itt lehet kiválasztani a játék módot, beállításokat, boltot
+-achivment rendszer
+
+
+Hamburger menü:
+-a játékoknál legyen pont rendszer -> highscore 
+-"új játék" gomb:
+	egyedül játszol pl
+-"csatalakozás" gomb:
+	online lobbíkhoz csatalakozhatsz
+	egy kódót kér (kb 6 jegyű) és ha beírod oda csatlakozol
+-"váró létrehozása" gomb:
+	egy váró, jobb felső sarokban a kóddal
+	??emberek profilja látszódjon ki van bent??
+-"beállítások" gomb:
+	-játék/ applikáció hangerő, zene hangerő
+	-mód: éjszakai/ normál
+	-alap fő szín változtatása, például a háttér a kék a legtöbb komponensnél és meg lehet változtatni sárgára
+	-nyelv:
+		bejelentkezésnél el lehet tárolni a nyelvet,
+		Google API, eltároljuk a felhasználó localsotrage-jába/
+		hozzá rendeljük a felhasználóhoz azt a nyelvet
+		(amit később meg tud változtatni játékon belül)
+	-fiókok hozzácsatolása, példul ha egyedi felhasználó akkor hozzá lehet kapcsolni az accounthoz a facebookot
+	-support
+	-gyík
+	-fórum
+	-emil küldés lehetőség a frissitésről, checkbox
+	-újítások, frissítések link
+	-kijelentkezési lehetőség
+-"bolt" gomb: 
+	-játékbeli coin-t lehet vásárolni
+	-tranzakció:
+		-regisztrációnál nem kell a bankkártya adata
+		-első vásárlásnál elkéri
+		-lehetőség hogy megjegyezze ezt/ ha nem akkor minden alkalommal elkéri
+-"vissza" gomb: 
+	vissza dob a karakterhez/
+	bezárja a hamburger menüt
+
+TROLLKODÁS
+-"egyedül játszanék botokkal" gomb:
+	-felugrik egy kérdőív:
+		-hol laksz?
+		-hány éves vagy? (18nál több kell legyen)
+		-van kocsid?
+		-van pénzed?
+	-google keresés alapján keresse meg a legközelebbi kocsmát
+	és mondja azt hogy "ide menj, ennyire nem lehetsz magányos"
+
+
+
+Új játék vagy váró létrehozás esetén ki lehet választani a játkot,
+a kiválasztás során meg kell adni a létszámot is,
+ez alapján lehet host-olni és ez alapján léphet be egy adott ember mennyiség.
+
+Hostolás esetén ha tele van a váró akkor lehet elindítani,
+nyomható lesz a "start" gomb.
+
+
+
+Játékok:
+-buszozás, több változatban, változtatható szabályok
+-saját játék készítés(fejlesztői)
+-lap felcsapás, magas nyer
+-21/ blackjack (én féle)
+-21 old schoole
+-én még soha
+-felelsz vagy mersz
+-mocsár
+-én még soha
+-...some other
+
+
+Minden játékon belül van egy kilépés gomb a jobb felső sarkoba,
+ha rányomsz megkérdezi hogy biztos ki akarsz lépni?,
+az igen-re kattintva visszadob a karakterhez.
+
+
+???A játékokban legyen "kimaradok a körböl" gomb???
+
+
+Lehgetőség a többi játékosnak a folytatásra:
+
+-A játékban ezalatt benn maradsz és egy bot rakja helyetted a lapokat/
+
+-A játékból kilépsz és egyel kevesebb személyesre kell állítani a játékmódot/
+
+-A játék véget ér, nincs győztes/
+
+-Benn maradsz a játékban csak kimarasz a körökből automatikusan/
+
+-Véget ér a játék többi játékos számára és automatikusan a kilépett veszít
+
+
+
+
+
+
+
+
+
+
+
+
+NYERS ÖTLETEK:
+
+Aplikáció neve?
+Alapszínek?
+
+Grafikát csinálok hozza de minden egyedi legyen vagy keressünk neten is azért?
+Fő színek mik legyenek?, hangok, hang effekteket hogy lehet hozza rendelni ilyenekhez (én pl nem tudom)?
+(js tud mp3majkkat lejátszani.)
+
+
+a meglévő elemekből bárki összerakhassa a saját játékát 
+hogy ha egy fejlesztő is szórakozni akar vele 
+akkor erre is csinálni egy rendszert, 
+amihez írhat saját játékmódokat.
+
+pl: 
+/roundWay
+/playDevice/...cube/...spinner
+/scoreSystem/...buszozas/...uvegezes
+
+
+a meglévő elemekből felépüléő játék egy json pl a basicCostumegame mappában. 
+a fejlesztőkenk szóló meg így helyezkedne el.
+
+advancedCostumeGame/developerID/gameName/index.js & json
+
+
+esetleg lehetne az hogy ha valaki egyedi dizájnt akarna hozzá adni 
+akkor arra lennenek componenseink amik egy children elemet várnak. 
+
+pl.:
+
+<gameDevice>
+    <egyediDevice />
+</gameDevice>
+
+és ez alapból becsomagolja a saját css-ünkbe. width 100% meg ilyenek.
+
+
+
+
