@@ -22,17 +22,19 @@ const Home = () => {
   }, [isAuthenticated]);
 
   const startingGameHandler = () => {
-    setIsAuthenticated(false);
+    setIsAuthenticated(true);
     fetchUsers({
       url: "" /*+ "/id"*/,
     });
   };
 
+  const alapReactImage = <img src={logo} className="App-logo" alt="logo" />;
+
   return (
     <div className="App" onClick={startingGameHandler}>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Start</p>
+        {alapReactImage}
+        <p>Start game</p>
         {isLoading && !error && <LoadingSpinner />}
         {!isLoading && error && <p>{error}</p>}
       </header>
