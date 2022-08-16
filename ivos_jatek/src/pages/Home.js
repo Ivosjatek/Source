@@ -12,6 +12,13 @@ const Home = () => {
   const { isLoading, error, sendRequest: fetchUsers } = useHttp();
   const history = useHistory();
 
+  const startingGameHandler = () => {
+    setIsAuthenticated(false);
+    fetchUsers({
+      url: "" /*+ "/id"*/,
+    });
+  };
+
   useEffect(() => {
     if (isAuthenticated) {
       history.push("/menu");
@@ -20,14 +27,7 @@ const Home = () => {
       history.push("/login");
     }
   }, [isAuthenticated]);
-
-  const startingGameHandler = () => {
-    setIsAuthenticated(true);
-    fetchUsers({
-      url: "" /*+ "/id"*/,
-    });
-  };
-
+  
   const alapReactImage = <img src={logo} className="App-logo" alt="logo" />;
 
   return (
