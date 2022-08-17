@@ -6,6 +6,7 @@ import classes from "./Menu.module.css";
 
 const Menu = (props) => {
   const characterName = localStorage.getItem("email");
+  //localStorage.removeItem("email");
 
   return (
     <div className={classes.menu}>
