@@ -1,3 +1,7 @@
+html {
+  border: none;
+}
+
 .App {
   text-align: center;
   background-image: url("./images/alcohol1.jpg");
