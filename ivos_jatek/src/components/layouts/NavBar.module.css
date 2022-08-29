@@ -15,7 +15,7 @@
 .menutitle {
   width: 100%;
   height: 100%;
-  background-color: rgb(82, 82, 82);
+  background-color: rgb(82, 138, 155);
 }
 
 .topnav a {
@@ -27,7 +27,6 @@
 }
 
 .topnav .icon {
-  background: black;
   display: block;
   position: absolute;
   right: 0;
@@ -35,10 +34,9 @@
 }
 
 .icons img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin: 0.25rem 0.2rem;
+  width: 30px;
+  height: 30px;
+  margin: 0.55rem 0.8rem;
   display: flex;
   flex-wrap: nowrap;
 }
@@ -47,14 +45,24 @@
   margin: 0.25rem 1rem;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  margin: 0.25rem 3rem;
+  margin: 0.25rem 4rem;
 }
 
 .shop img {
   margin: 0.25rem 1rem;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  margin: 0.25rem 5.84rem;
+  margin: 0.25rem 7.84rem;
+}
+
+.order {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.topnav p {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
 }

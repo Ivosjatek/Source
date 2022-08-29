@@ -1,26 +1,17 @@
 import classes from "./LevelBar.module.css";
 
 const LevelBar = () => {
-  let sliderValue = 20; //basicly 0, kell az előző
-  let sliderMax = 100;
-  let sliderMin = 0;
-
-  const valueChangeHandler = () => {
-    //külső behatás, valami játék véget
-
-    sliderValue = 40;
+  const getLevel = () => {
+    //fetch database, get level
   };
 
+  const lvlStyle = { width: "" + 90 + "%" };
+
   return (
-    <div className={classes.slidecontainer}>
-      <input
-        className={classes.slider}
-        type="range"
-        min={sliderMin}
-        max={sliderMax}
-        value={sliderValue}
-        onChange={valueChangeHandler}
-      />
+    <div className={classes.lvlInterface}>
+      <div className={classes.maxLevelBar}>
+        <div className={classes.levelSlider} style={lvlStyle}></div>
+      </div>
     </div>
   );
 };
