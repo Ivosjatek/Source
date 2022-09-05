@@ -10,9 +10,11 @@ import settingsgear from "../../images/engine-gears-icon.svg";
 import shopbutton from "../../images/shopping-trolley-icon.svg";
 import hmbbutton from "../../images/hamburger-menu-icon.svg";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const NavBar = () => {
   const [isOpne, setIsOpen] = useState(false);
+  const history = useHistory();
 
   const shopHandler = () => {
     console.log("to shop loading");
@@ -24,6 +26,10 @@ const NavBar = () => {
 
   const menuOpenHandler = () => {
     setIsOpen(!isOpne);
+  };
+
+  const buszClickHandler = () => {
+    history.push("/busz");
   };
 
   return (
@@ -38,10 +44,13 @@ const NavBar = () => {
         <Slide direction="right">
           <Fade duration="3500">
             <div className={classes.order}>
-              <p>Játék 1</p>
-              <p>Játék 2</p>
-              <p>Játék 3</p>
-              <p>Játék 4</p>
+              <p onClick={buszClickHandler}>Buszozás</p>
+              <p>Huszonegy</p>
+              <p>Lap felcsapás</p>
+              <p>Mocsár</p>
+              <p>Felelsz vagy mersz?</p>
+              <p>Én még soha</p>
+              <p>Saját játék</p>
             </div>
           </Fade>
         </Slide>

@@ -5,7 +5,7 @@ html {
 .App {
   text-align: center;
   background-image: url("./images/alcohol1.jpg");
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -37,6 +37,12 @@ html {
 .App p {
   position: absolute;
   top: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 @keyframes App-logo-spin {

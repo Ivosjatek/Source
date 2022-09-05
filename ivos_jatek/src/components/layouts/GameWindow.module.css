@@ -1,0 +1,11 @@
+.exit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.window {
+  width: 100%;
+}
