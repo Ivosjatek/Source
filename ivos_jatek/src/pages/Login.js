@@ -1,5 +1,9 @@
-import useInput from "../hooks/use-input";
+import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import useHttp from "../hooks/use-http";
+import useInput from "../hooks/use-input";
+
+import LoadingSpinner from "../components/UI/LoadingSpinner"
 
 import classes from "./Login_Register.module.css";
 
@@ -15,7 +19,6 @@ const Register = () => {
     inputBlurHandler: emailBlurHandler,
     reset: resetEmail,
   } = useInput(isEmail);
-
   const {
     value: passwordValue,
     isValid: passwordIsValid,
@@ -25,20 +28,40 @@ const Register = () => {
     reset: resetPassword,
   } = useInput(isNotEmpty);
   const history = useHistory();
-
-  const registerHandler = () => {
-    history.push("/register");
-  };
-
-  const forgetPasswordHandler = () => {
-    //history.push("/forget_password");
-    console.log("to the password change page...");
-  };
+  const { isLoading, error, sendRequest } = useHttp();
 
   let formIsValid = false;
+  const datas = [];
+  const transformLogin = (loginDatas) => {
+    for (const datakey in loginDatas) {
+      datas.push({
+        id: datakey,
+        username: loginDatas[datakey].Username,
+        password: loginDatas[datakey].Password,
+        email: loginDatas[datakey].Email,
+        characterName: loginDatas[datakey].Character.CharacterName,
+        characterLevel: loginDatas[datakey].Character.Level,
+      });
+    };
+  }
 
-  if (emailIsValid && passwordIsValid) {
+  useEffect(() => {
+    const fetchAbout = async () => {
+      try {
+        const responseData = await sendRequest("");
+        transformLogin(responseData);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    fetchAbout();
+  }, [sendRequest]);
+
+  if (datas.email === emailIsValid && datas.password === passwordIsValid) {
     formIsValid = true;
+  } else {
+    console.log("Email or Password is not correct");
+    //formIsValid = true;
   }
 
   const submitHandler = (event) => {
@@ -51,16 +74,19 @@ const Register = () => {
     console.log("LOGIN SUCCESS!");
     console.log(emailValue, passwordValue);
 
-    //database fetch, get
-    //database get level,username to localstorage
-
-    //próba
-    localStorage.setItem("email", emailValue);
-
     resetEmail();
     resetPassword();
 
     history.push("/menu");
+  };
+
+  const registerHandler = () => {
+    history.push("/register");
+  };
+
+  const forgetPasswordHandler = () => {
+    //history.push("/forget_password");
+    console.log("to the password change page...");
   };
 
   const emailClasses = emailHasError
@@ -113,6 +139,7 @@ const Register = () => {
           <button onClick={registerHandler}>Register</button>
         </div>
       </form>
+      {!error && isLoading && <LoadingSpinner />}
     </div>
   );
 };
