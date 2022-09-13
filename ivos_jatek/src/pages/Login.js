@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import useHttp from "../hooks/use-http";
 import useInput from "../hooks/use-input";
@@ -29,27 +29,17 @@ const Register = () => {
   } = useInput(isNotEmpty);
   const history = useHistory();
   const { isLoading, error, sendRequest } = useHttp();
+  const [loadedUsers, setLoadedUsers] = useState([]);
 
-  let formIsValid = false;
-  const datas = [];
-  const transformLogin = (loginDatas) => {
-    for (const datakey in loginDatas) {
-      datas.push({
-        id: datakey,
-        username: loginDatas[datakey].Username,
-        password: loginDatas[datakey].Password,
-        email: loginDatas[datakey].Email,
-        characterName: loginDatas[datakey].Character.CharacterName,
-        characterLevel: loginDatas[datakey].Character.Level,
-      });
-    };
-  }
+  /*let formIsValid = false;
+
+  console.log(loadedUsers);
+
 
   useEffect(() => {
     const fetchAbout = async () => {
       try {
-        const responseData = await sendRequest("");
-        transformLogin(responseData);
+        const responseData = await sendRequest(process.env.REACT_APP_BACKEND_DEFAULT_API_KEY + "/users");
       } catch (err) {
         console.log(err);
       }
@@ -62,7 +52,7 @@ const Register = () => {
   } else {
     console.log("Email or Password is not correct");
     //formIsValid = true;
-  }
+  }*/
 
   const submitHandler = (event) => {
     event.preventDefault();
