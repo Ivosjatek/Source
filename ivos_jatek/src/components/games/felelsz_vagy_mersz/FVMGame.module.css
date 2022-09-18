@@ -1,0 +1,42 @@
+.back {
+  background: linear-gradient(#d12f65, #ff7403);
+}
+
+.title {
+  text-align: center;
+  width: 80%;
+  margin-top: 2rem;
+}
+
+.rules {
+  text-align: center;
+  margin: 2rem;
+}
+
+.description {
+  text-align: center;
+  display: block;
+  margin: 1rem;
+}
+
+.exit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 1rem;
+  margin-top: 1.5rem;
+}
+
+.ok {
+  position: relative;
+  bottom: 0;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.formate {
+  text-align: center;
+  font-weight: bold;
+}

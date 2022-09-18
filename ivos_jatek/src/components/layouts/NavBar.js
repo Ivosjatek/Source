@@ -1,9 +1,6 @@
 import { Fade } from "react-awesome-reveal";
 import { Slide } from "react-awesome-reveal";
 
-import Settings from "../../components/UI/setting/Settings";
-import Shop from "../../components/UI/shop/Shop";
-
 import classes from "./NavBar.module.css";
 
 import settingsgear from "../../images/engine-gears-icon.svg";
@@ -37,7 +34,7 @@ const NavBar = () => {
   };
 
   const felelszVagyMerszHandler = () => {
-    history.push("/felelsz_vagy_mersz");
+    history.push("/fvm_game");
   };
 
   return (

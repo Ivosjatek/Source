@@ -5,7 +5,7 @@ import Menu from "./pages/Menu";
 import Register from "./pages/Register";
 import Busz from "./components/games/busz/Busz";
 import LapFelcsapas from "./components/games/lapfelcsapas/LapFelcsapas";
-import FelelszVagyMersz from "./components/games/felelsz_vagy_mersz/FelelszVagyMersz";
+import FVMGame from "./components/games/felelsz_vagy_mersz/FVMGame";
 
 function App() {
   return (
@@ -28,8 +28,8 @@ function App() {
       <Route path="/lapfelcsapas">
         <LapFelcsapas />
       </Route>
-      <Route path="/felelsz_vagy_mersz">
-        <FelelszVagyMersz />
+      <Route path="/fvm_game">
+        <FVMGame />
       </Route>
       <Redirect to="/home" />
     </Switch>
