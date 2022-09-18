@@ -32,6 +32,14 @@ const NavBar = () => {
     history.push("/busz");
   };
 
+  const felcsapasHandler = () => {
+    history.push("/lapfelcsapas");
+  };
+
+  const felelszVagyMerszHandler = () => {
+    history.push("/felelsz_vagy_mersz");
+  };
+
   return (
     <div className={classes.topnav}>
       <div className={classes.menutitle}>
@@ -46,9 +54,9 @@ const NavBar = () => {
             <div className={classes.order}>
               <p onClick={buszClickHandler}>Buszozás</p>
               <p>Huszonegy</p>
-              <p>Lap felcsapás</p>
+              <p onClick={felcsapasHandler}>Lap felcsapás</p>
               <p>Mocsár</p>
-              <p>Felelsz vagy mersz?</p>
+              <p onClick={felelszVagyMerszHandler}>Felelsz vagy mersz?</p>
               <p>Én még soha</p>
               <p>Saját játék</p>
             </div>

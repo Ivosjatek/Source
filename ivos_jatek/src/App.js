@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import Register from "./pages/Register";
 import Busz from "./components/games/busz/Busz";
+import LapFelcsapas from "./components/games/lapfelcsapas/LapFelcsapas";
+import FelelszVagyMersz from "./components/games/felelsz_vagy_mersz/FelelszVagyMersz";
 
 function App() {
   return (
@@ -22,6 +24,12 @@ function App() {
       </Route>
       <Route path="/busz">
         <Busz />
+      </Route>
+      <Route path="/lapfelcsapas">
+        <LapFelcsapas />
+      </Route>
+      <Route path="/felelsz_vagy_mersz">
+        <FelelszVagyMersz />
       </Route>
       <Redirect to="/home" />
     </Switch>

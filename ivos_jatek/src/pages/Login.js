@@ -31,6 +31,7 @@ const Register = () => {
   const { isLoading, error, sendRequest } = useHttp();
   const [loadedUsers, setLoadedUsers] = useState([]);
 
+  let formIsValid = true;
   /*let formIsValid = false;
 
   console.log(loadedUsers);
