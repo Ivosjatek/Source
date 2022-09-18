@@ -21,7 +21,7 @@ const Busz = () => {
   let mod;
 
   useEffect(() => {
-    console.log(width, height, isMobile);
+    //console.log(width, height, isMobile);
   }, [width]);
 
   const dayClickHandler = () => {
