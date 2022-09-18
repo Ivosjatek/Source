@@ -1,43 +1,44 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 import LoadingSpinner from "../components/UI/LoadingSpinner";
-
-import logo from "../logo.svg";
+import Cheeres from "../components/UI/cheersAnimation/Cheers";
 import "../App.css";
+import "./Home.css";
 import useHttp from "../hooks/use-http";
 
 const Home = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(); //basicle isnt logged in
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const { isLoading, error, sendRequest: fetchUsers } = useHttp();
+  const [started, setStarted] = useState(false);
   const history = useHistory();
 
   const startingGameHandler = () => {
+    setStarted(true);
     setIsAuthenticated(false);
-    fetchUsers({
-      url: "" /*+ "/id"*/,
-    });
+    setTimeout(() => {
+      if(isAuthenticated){
+        history.push("/menu");
+      }else{
+        history.push("/login");
+      }
+    }, 2500);
   };
 
-  useEffect(() => {
-    if (isAuthenticated) {
-      history.push("/menu");
-    }
-    if (isAuthenticated === false) {
-      history.push("/login");
-    }
-  }, [isAuthenticated]);
-  
-  const alapReactImage = <img src={logo} className="App-logo" alt="logo" />;
-
   return (
-    <div className="App" onClick={startingGameHandler}>
+    <div className="App">
       <header className="App-header">
-        {alapReactImage}
-        <p>Start game</p>
+        {started ? (
+          <Cheeres />
+        ) : (
+          <p onClick={startingGameHandler}>Start game</p>
+        )}
         {isLoading && !error && <LoadingSpinner />}
         {!isLoading && error && <p>{error}</p>}
       </header>
+      <div className="backdrop">
+        <div className="backdrop_inner"></div>
+      </div>
     </div>
   );
 };

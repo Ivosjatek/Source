@@ -1,0 +1,51 @@
+.chers_animation_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cheers_logo img{
+    width: 150px;
+    filter: invert(1);
+}
+.cheers_hands img{
+    width: 150px;
+}
+.cheers_hand_left{
+    transform: scaleX(-1) translateX(500px); 
+    position: relative;
+    animation: cheers_hand_left 1.2s linear forwards;
+}
+.cheers_hand_right{
+    position: relative;
+    transform: translateX(500px); 
+    animation: cheers_hand_right 1.2s linear forwards;
+}
+
+@keyframes cheers_hand_left {
+    0%{
+        transform: scaleX(-1) translateX(500px);
+    }
+    90%{
+        rotate: 20deg;
+        transform: scaleX(-1) translateX(0px); 
+    }
+    100%{
+        rotate: -20deg;
+        transform: scaleX(-1) translateX(-10px); 
+    }
+}
+
+@keyframes cheers_hand_right {
+    0%{
+        transform: translateX(500px);
+    }
+    90%{
+        rotate: -20deg;
+        transform: translateX(0px);
+    }
+    100%{
+        rotate: 20deg;
+        transform: translateX(-10px); 
+    }
+}

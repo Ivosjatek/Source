@@ -1,27 +1,12 @@
 .stack {
-  width: 98.5%;
   height: 100%;
-  border-radius: 40px 1px 40px 40px;
   border-color: rgb(110, 138, 190);
-  border-style: solid;
   background-color: rgb(110, 138, 190);
-  padding-bottom: 1rem;
 }
-
-body {
-  margin: 0;
-  font-family: "Noto Sans JP", sans-serif;
-  background-color: white;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 .form_control {
-  margin-bottom: 1rem;
-  padding-left: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .form_control input,
@@ -31,7 +16,6 @@ code {
 
 .form_control label {
   font-weight: bold;
-  margin-bottom: 0.5rem;
 }
 
 .form_control input,
@@ -40,8 +24,6 @@ code {
   padding: 0.5rem;
   border-radius: 4px;
   border: 1px solid #ccc;
-  width: 19rem;
-  max-width: 100%;
 }
 
 .form_control input:focus {
@@ -52,21 +34,14 @@ code {
 
 .control_group {
   display: flex;
-  column-gap: 1rem;
   flex-wrap: wrap;
-  margin-top: 1rem;
-  margin-left: 2%;
 }
 
 .control_group .form-control {
-  min-width: 15rem;
-  flex: 1;
 }
 
 .form_actions {
   text-align: left;
-  padding-top: 1rem;
-  padding-left: 0.7rem;
 }
 
 .form_actions button {
