@@ -1,0 +1,38 @@
+[
+  {
+    "id": 0,
+    "task_description_truth": "Felelsz: A jelenelegiek közül ki irritál a legjobban?",
+    "task_description_dare": "Mersz: Valaki kever neked egy koktélt 3 alapanyagból amit talál és meg kell innod.",
+    "penalty": "Büntetés: 1 feles"
+  },
+  {
+    "id": 1,
+    "task_description_truth": "Felelsz: Mi a legrosszabb étel amit valaha a szüleid vagy a nagyszüleid főztek?, de megetted.",
+    "task_description_dare": "Mersz: Csapj a töled jobbra ülő fenekére.",
+    "penalty": "Büntetés: 2 korty sör"
+  },
+  {
+    "id": 2,
+    "task_description_truth": "Felelsz: Mi a legfurcsább szokásod?",
+    "task_description_dare": "Mersz: Szkanderezz egy általad választott emberrel, aki veszít, azé a büntetés.",
+    "penalty": "Büntetés: 1 feles"
+  },
+  {
+    "id": 3,
+    "task_description_truth": "Felelsz: Mi volt életed legcikibb pillanata?",
+    "task_description_dare": "Mersz: Írj egy 4-5 soros rap-et valakiről, akár kinézet alapján és a követkető körben olvasd fel. (a következő körből kimaradsz, olvasás miatt)",
+    "penalty": "Büntetés: 2 korty sör"
+  },
+  {
+    "id": 4,
+    "task_description_truth": "Felelsz: Mesélj egy viccet!",
+    "task_description_dare": "Mersz: Akkor is mesélj egy viccet!",
+    "penalty": "Büntetés: 3 korty sör"
+  },
+  {
+    "id": 5,
+    "task_description_truth": "Felelsz: Van harmadik neved?, ha igen mi?",
+    "task_description_dare": "Mersz: Tegyél jégkockát a pólódba és hagyd amíg elolvad.",
+    "penalty": "Büntetés: 2 korty sör"
+  }
+]

@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: auto;
 }
 
 .form_control input,
@@ -16,6 +17,7 @@
 
 .form_control label {
   font-weight: bold;
+  margin-top: 1rem;
 }
 
 .form_control input,
@@ -42,10 +44,11 @@
 
 .form_actions {
   text-align: left;
+  margin: auto;
 }
 
-.form_actions button {
-  margin-left: 1rem;
+.form_actions {
+  margin-left: 4rem;
 }
 
 .invalid input {
@@ -70,6 +73,7 @@ button {
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
   cursor: pointer;
+  margin-left: 1rem;
 }
 
 button:hover,

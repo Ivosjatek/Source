@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 import Busz from "./components/games/busz/Busz";
 import LapFelcsapas from "./components/games/lapfelcsapas/LapFelcsapas";
 import FVMGame from "./components/games/felelsz_vagy_mersz/FVMGame";
+import Busz_game from "./components/games/busz/Busz_game";
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
       </Route>
       <Route path="/fvm_game">
         <FVMGame />
+      </Route>
+      <Route path="/busz_game">
+        <Busz_game />
       </Route>
       <Redirect to="/home" />
     </Switch>

@@ -64,9 +64,13 @@ const Busz = () => {
     history.push("/menu");
   };
 
+  const startBuszHandler = () => {
+    history.push("/busz_game");
+  };
+
   const busClickHandler = () => toast("Csú Csú", { icon: "🚌 🚍" });
   return (
-    <div className={classes.bodye} style={{ height: height }}>
+    <div className={classes.bodye}>
       <div className={classes.maine}>
         <div className={classes.exit}>
           <button onClick={backClickHandler}>X</button>
@@ -142,7 +146,7 @@ const Busz = () => {
               </p>
             )}
             <div className={classes.button}>
-              <button>Start</button>
+              <button onClick={startBuszHandler}>Start</button>
             </div>
           </form>
           <div className={classes.kep} onClick={busClickHandler}>

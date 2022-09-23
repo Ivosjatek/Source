@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+
+.example2 {
+  position: absolute;
+  margin-left:400px;
+  margin-top: 200px;
+  width:200px;
+  height:230px;
+  border: 5px solid red;
+  padding: 10px;
+  border-radius: 0.2rem 80rem 67rem 36rem / 0.3rem 55rem 55rem 20rem;
+  transform: rotateX(212deg) rotateY(45deg);
+  background-color:red;
+}
+.example3 {
+  position: absolute;
+  margin-left:238px;
+  margin-top: 200px;
+  width:200px;
+  height:230px;
+  border: 5px solid red;
+  padding: 10px;
+  border-radius: 0.2rem 85rem 55rem 30rem / 0.3rem 48rem 50rem 20rem;
+  transform: rotateX(208deg) rotateY(135deg);
+  background-color:red;
+}
+
+
+</style>
+</head>
+<body>
+
+	<div class="example2"></div>
+    <div class="example3"></div>
+
+</body>
+</html>
