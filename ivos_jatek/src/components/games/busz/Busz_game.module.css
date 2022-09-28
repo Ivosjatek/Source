@@ -11,29 +11,29 @@
 .cardBackFour {
   width: 60px;
   height: 90px;
-  background-image: url("../../../images/alcohol3.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
   position: absolute;
   left: 0;
+  bottom: 0;
   margin-bottom: 3rem;
+  margin-bottom: 32%;
 }
 
 .cardBackOne {
   bottom: 0;
-  margin-left: 10%;
+  margin-left: 6%;
+ 
 }
 .cardBackTwo {
   bottom: 0;
-  margin-left: 31%;
+  margin-left: 27%;
 }
 .cardBackThree {
   bottom: 0;
-  margin-left: 51%;
+  margin-left: 47%;
 }
 .cardBackFour {
   bottom: 0;
-  margin-left: 71%;
+  margin-left: 67%;
 }
 .slideUpCards {
   width: 100%;
@@ -53,7 +53,7 @@
   left: 0;
   top: 0;
   margin-left: 40%;
-  margin-top: 60%;
+  margin-top: 10%;
 }
 
 .playerTwo {

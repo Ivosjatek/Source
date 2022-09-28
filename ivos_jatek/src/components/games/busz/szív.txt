@@ -3,10 +3,9 @@
 <head>
 <style> 
 
-.example2 {
+.right {
   position: absolute;
-  margin-left:400px;
-  margin-top: 200px;
+  margin-left:162px;
   width:200px;
   height:230px;
   border: 5px solid red;
@@ -15,10 +14,8 @@
   transform: rotateX(212deg) rotateY(45deg);
   background-color:red;
 }
-.example3 {
+.left {
   position: absolute;
-  margin-left:238px;
-  margin-top: 200px;
   width:200px;
   height:230px;
   border: 5px solid red;
@@ -28,13 +25,18 @@
   background-color:red;
 }
 
+.kor {
+  width: 100%;
+  margin: auto;
+}
+
 
 </style>
 </head>
 <body>
-
-	<div class="example2"></div>
-    <div class="example3"></div>
-
+  <div class="kor">
+	  <div class="left"></div>
+      <div class="right"></div>
+  </div>
 </body>
 </html>

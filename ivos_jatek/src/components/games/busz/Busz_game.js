@@ -4,6 +4,8 @@ import useIsMobile from "../../../hooks/use-mobile";
 
 import classes from "./Busz_game.module.css";
 
+import GameCard from "./GameCard";
+
 const Busz_game = () => {
   let player_number = 4;
   const [showCards, setShowCards] = useState(false);
@@ -51,16 +53,16 @@ const Busz_game = () => {
           >
             <Fade duration={2500}>
               <div className={classes.cardBackOne} onClick={cardOneShowUp}>
-                Card1_back - Card1_front
+                <GameCard type="pikk" number="J" />
               </div>
               <div className={classes.cardBackTwo} onClick={cardSecondShowUp}>
-                Card2_back - Card2_front
+                <GameCard type="kor" number="K" />
               </div>
               <div className={classes.cardBackThree} onClick={cardThirdShowUp}>
-                Card3_back - Card3_front
+                <GameCard type="treff" number="A" />
               </div>
               <div className={classes.cardBackFour} onClick={cardFourthShowUp}>
-                Card4_back - Card4_front
+                <GameCard type="karo" number="5" />
               </div>
             </Fade>
           </div>
