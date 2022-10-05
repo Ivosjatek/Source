@@ -37,6 +37,10 @@ const NavBar = () => {
     history.push("/fvm_game");
   };
 
+  const mocsarHandler = () => {
+    history.push("/mocsar");
+  };
+
   return (
     <div className={classes.topnav}>
       <div className={classes.menutitle}>
@@ -52,7 +56,7 @@ const NavBar = () => {
               <p onClick={buszClickHandler}>Buszozás</p>
               <p>Huszonegy</p>
               <p onClick={felcsapasHandler}>Lap felcsapás</p>
-              <p>Mocsár</p>
+              <p onClick={mocsarHandler}>Mocsár</p>
               <p onClick={felelszVagyMerszHandler}>Felelsz vagy mersz?</p>
               <p>Én még soha</p>
               <p>Saját játék</p>
